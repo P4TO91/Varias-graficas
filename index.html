@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+  <!-- CSS -->
+<title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+<body>
+  <h1>CONTROL EPIDEMIOLOGICO</h1>
+<div>
+  <canvas id="myChart"></canvas>
+  Contagios <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">+99 <span class="visually-hidden">unread messages</span>
+</div>
+<div style="height: 100px; background-color: rgba(255,0,0,.1);">
+  <div class="mh-100" style="width: 100px; height: 200px; background-color: rgba(0,0,255,.1);">Max-height 100%</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const data={
+  labels : [
+    'March-2020',
+    'April-2020',
+    'May-2020 ',
+    'Jun-2020',
+    'Jul-2020',
+    'Sept-2020',
+    'Oct-2020',
+    'Nov-2020',
+    'Dic-2020',
+    'Jan-2021',
+    'Feb-2021',
+    'March-2021',
+    'April-2021',
+    'May-2021 ',
+    'Jun-2021',
+    'Jul-2021',
+    'Sept-2021',
+    'Oct-2021',
+    'Nov-2021',
+    'Dic-2021',
+    'Jan-2022',
+  ],
+
+    datasets: [{
+      type: 'bar',
+      label: 'Contagiados',
+      data: [11,891, 5855,8364,28874,29863,21949,33194,23655,41932,31203,4595,17393,109847,96713,589899,4247,87,1,1,1],
+       borderColor: 'rgb(255, 99, 132)',
+    backgroundColor: 'rgba(255, 99, 132, 0.2)'
+  },{
+      type: 'bar',
+      label: 'Recuperados',
+      data: [11,835, 5580,7933,27504,28650,21315,32282,23090,40837,30210,4446,16902,106335,93937,576491,4110,86,1,1,1],
+      fill: true,
+      borderColor: 'rgb(54, 162, 235)'
+  },{
+      type: 'line',
+      label: 'Muertos',
+      data: [,52, 247,389,1209,1033,527,776,478,955,847,120,416,3106,2464,11999,121,1,,,],
+      fill: true,
+      borderColor: 'rgb(60, 200, 700)'
+  }]
+};
+
+  const config = {
+    type: 'scatter',
+    data: data,
+    options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+};
+
+</script>
+<script>
+  const mychart= new Chart(
+    document.getElementById('myChart'),
+    config 
+      );
+</script>  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+<script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
+</body>
+</html>
